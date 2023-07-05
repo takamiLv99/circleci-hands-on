@@ -28,7 +28,7 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-      - run: run test:ci
+      - run: npm run test:ci
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
