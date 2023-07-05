@@ -17,6 +17,14 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+    
+  unitest:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: npm install
+      - run: run test:ci
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
